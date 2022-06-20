@@ -7,21 +7,21 @@
   <%- include('../partials/nav.ejs');%>
   <main class="main-webp">
   <section class="webp-upload">
-        <h1>Convert An Image To The Webp Format</h1>
+        <h1>Convert An Image from WEBP to PNG Format</h1>
         <p>WEBP Converter</p>
 
         <ul>
-          <li>Choose File that you want to Convert into <strong>WEBP</strong> Format.You can Convert <strong>PNG,JPEG,JPG,TIFF,WebP or raw Y'CbCr </strong>samples. Note: Animated PNG and WebP files are not supported.</li>
+          <li>Choose <strong>WEBP</strong> File that you want to Convert into <strong>PNG</strong> Format. Note: Animated WebP files are not supported.</li>
           <li>You can Convert <strong>1</strong> file at one time.The Maximum File Size is <strong>5MB.</strong></li>
           <li>After Selecting the File Click on <strong>Convert image</strong> button & Your converted file will be downloaded within a few seconds.</li>
         </ul>
-        <form action="/convert-to-webp" id="myform" method="POST" enctype="multipart/form-data">
+        <form action="/webp-to-png" id="myform" method="POST" enctype="multipart/form-data">
           <div class="form">
           <div class="label">
             <i class="fa fa-cloud-upload" aria-hidden="true"></i>
             <p>Upload Files here</p>
-            <input type="file" name="webp" id="webp" required accept="image/x-png,image/jpeg,image/jpg," >
-            <label class="upload-file" for="webp">
+            <input type="file" name="webptopng" id="webptopng" required accept="image/webp," >
+            <label class="upload-file" for="webptopng">
               <i class="fa-solid fa-magnifying-glass"></i>
               <span>Choose File</span>
             </label>

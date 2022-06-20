@@ -31,6 +31,7 @@ webpBtn.addEventListener('click',()=>{
       });
 
 webp.addEventListener('change',(e)=>{
+  let allowedExtension = ['image/jpeg', 'image/jpg', 'image/png','image/tiff','image/webp'];
   if(e.target.files.length == 0){
     return
   }
@@ -38,20 +39,28 @@ webp.addEventListener('change',(e)=>{
   let url = URL.createObjectURL(e.target.files[0]);
   let name=e.target.files[0].name;
   let size=e.target.files[0].size;
+  let type=e.target.files[0].type;
   Totalsize =(size / 1048576).toFixed(2);
 
-  previewImage.setAttribute('src',url);
-  document.querySelector(".file-name").textContent=name;
-  document.querySelector("#size").textContent= Totalsize + " MB";
-  previewDiv.style.display="flex";
-  document.getElementById('webpBtn').removeAttribute("disabled", "disabled");
+  //  type validation
+  if(allowedExtension.indexOf(type)>-1)
+  {
+   previewImage.setAttribute('src',url);
+   document.querySelector(".file-name").textContent=name;
+   document.querySelector("#size").textContent= Totalsize + " MB";
+   previewDiv.style.display="flex";
+   document.getElementById('webpBtn').removeAttribute("disabled", "disabled");
+  }else{
+    toastr["error"]("File type not Supported..", "Error!");
+    webp.value = "";
+       }
 
 
     if (Totalsize > maxSize) {
       toastr["error"]("File Limit exceeded!.", "Error!");
       document.getElementById('webpBtn').setAttribute("disabled", "disabled");
      }
-  
+
   
 })
 

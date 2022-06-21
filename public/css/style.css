@@ -885,7 +885,6 @@ section .privacy p {
 }
 .about-section .about .about-detail p a {
   font-size: 18px;
-  font-weight: 600;
 }
 .about-section .about .about-detail p a:hover {
   text-decoration: underline;

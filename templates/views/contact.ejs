@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs');%>
+</head>
+<body>
+    <%- include('../partials/nav.ejs');%>
+    
+
+    <main>
+        <section class="contact-section">
+            <div>
+                <h4>Contact Us</h4>
+                <div class="contact">
+                    <div class="form">
+                        <form action="https://getform.io/f/921eede3-8f87-4697-8fc9-355225c5f7a1" method="POST">
+                            <div>
+                                <label for="name">Name</label>
+                                <input type="text" placeholder="Name" name="name" id="name" required minlength="3">
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" placeholder="Email" name="email" id="email" required minlength="7">
+                            </div>
+                            <div>
+                                <label for="msg">Messsage</label>
+                                <textarea placeholder="Message.." name="msg" id="msg" required minlength="10"></textarea>
+                            </div>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
+                    </div>
+                    <div class="contact-img">
+                        <img src="icons/contact.svg" alt="contact">
+                    </div>
+                </div>
+            </div>
+        </section>
+   </main>
+
+   <%- include('../partials/footer.ejs');%>
+
+</body>
+</html>

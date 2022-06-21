@@ -5,6 +5,20 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #CC7EDF;
+  border-radius: 100vw;
+}
+
 body, html {
   overflow-x: hidden;
   background: #F5F5F5;
@@ -676,4 +690,241 @@ footer > div div ul li a:hover {
 }
 .other-web div .other-formats .other-tools div a:hover {
   color: #CC7EDF;
+}
+
+.contact-section {
+  padding: 80px 16px;
+}
+.contact-section div h4 {
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  color: #615f5f;
+}
+.contact-section div .contact {
+  margin-top: 60px;
+  display: grid;
+  row-gap: 60px;
+}
+.contact-section div .contact .form form {
+  display: grid;
+  row-gap: 20px;
+}
+.contact-section div .contact .form form div {
+  display: grid;
+  row-gap: 8px;
+}
+.contact-section div .contact .form form div label {
+  font-size: 18px;
+  line-height: 28px;
+  color: #615f5f;
+  font-weight: 500;
+}
+.contact-section div .contact .form form div input, .contact-section div .contact .form form div textarea {
+  padding: 14px 16px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #617283;
+  font-weight: 500;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid #CC7EDF;
+}
+.contact-section div .contact .form form div textarea {
+  height: 320px;
+  resize: none;
+}
+.contact-section div .contact .form form button {
+  margin-top: 12px;
+  border: 1px solid #CC7EDF;
+  color: #CC7EDF;
+  cursor: pointer;
+  max-width: 168px;
+}
+.contact-section div .contact .form form button:hover {
+  background-color: #CC7EDF;
+  color: #F5F5F5;
+  transition: all 0.2s ease-in-out;
+}
+.contact-section div .contact .contact-img {
+  display: grid;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.contact-section div .contact .contact-img img {
+  width: 100%;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .contact-section {
+    padding: 120px 24px;
+  }
+  .contact-section div h4 {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 600;
+  }
+  .contact-section div .contact .form {
+    margin-top: 40px;
+    width: 520px;
+    margin: 20px auto;
+  }
+  .contact-section div .contact .form form {
+    row-gap: 24px;
+  }
+  .contact-section div .contact .form form input, .contact-section div .contact .form form textarea {
+    font-weight: 500;
+  }
+  .contact-section div .contact .form form button {
+    margin-top: 32px;
+  }
+  .contact-section div .contact .contact-img {
+    width: 80vw;
+    margin: 20px auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact-section {
+    padding: 120px 32px;
+  }
+  .contact-section div .contact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-section div .contact .form {
+    margin-top: 40px;
+    max-width: 480px;
+    margin: 20px auto;
+  }
+  .contact-section div .contact .form form {
+    row-gap: 24px;
+  }
+  .contact-section div .contact .form form input, .contact-section div .contact .form form textarea {
+    font-weight: 500;
+  }
+  .contact-section div .contact .form form button {
+    margin-top: 32px;
+  }
+  .contact-section div .contact .contact-img {
+    margin-top: 140px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact-section {
+    padding: 120px 0px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .contact-section div .contact {
+    grid-template-columns: repeat(2, 1fr);
+    place-content: start;
+  }
+  .contact-section div .contact .form {
+    margin-top: 40px;
+    max-width: none;
+    margin-left: 0;
+  }
+  .contact-section div .contact .form form {
+    row-gap: 24px;
+  }
+  .contact-section div .contact .form form input, .contact-section div .contact .form form textarea {
+    font-weight: 500;
+  }
+  .contact-section div .contact .form form button {
+    margin-top: 32px;
+  }
+  .contact-section div .contact .contact-img {
+    margin-top: 0px;
+    max-width: none;
+    width: 100%;
+  }
+  .contact-section div .contact .contact-img img {
+    height: 620px;
+  }
+}
+
+section .privacy {
+  padding: 40px 16px;
+}
+section .privacy h2 {
+  margin-top: 20px;
+}
+section .privacy p {
+  margin-top: 12px !important;
+}
+@media screen and (min-width: 768px) {
+  section .privacy {
+    padding: 60px 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  section .privacy {
+    padding: 60px 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  section .privacy {
+    padding: 60px 0px;
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+.about-section {
+  padding: 60px 16px;
+}
+.about-section > h2 {
+  text-align: center;
+}
+.about-section .about {
+  margin-top: 40px;
+  display: grid;
+  row-gap: 40px;
+}
+.about-section .about .about-detail p a {
+  font-size: 18px;
+  font-weight: 600;
+}
+.about-section .about .about-detail p a:hover {
+  text-decoration: underline;
+}
+.about-section .about .about-img {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.about-section .about .about-img img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .about-section {
+    padding: 60px 24px;
+  }
+  .about-section .about {
+    margin-top: 60px;
+    row-gap: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about-section {
+    padding: 80px 32px;
+  }
+  .about-section .about {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+  }
+  .about-section .about .about-img {
+    grid-column-start: 2;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-section {
+    padding: 120px 0px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .about-section .about {
+    column-gap: 60px;
+  }
 }

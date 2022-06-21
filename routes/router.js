@@ -118,8 +118,22 @@ res.download(output_path);
     });
     });
 
+    router.get('/contact',(req,res)=>{
+    res.render('contact',{
+        title:"Contact Us"
+    });
+    });
 
-
+    router.get('/about',(req,res)=>{
+      res.render('about',{
+          title:"About us"
+      });
+      });
+    router.get('/privacy-policy',(req,res)=>{
+      res.render('privacy-policy',{
+          title:"Privacy Policy"
+      });
+      });
 
     router.get('/progress',(req,res)=>{
     res.render('progress',{

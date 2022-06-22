@@ -183,6 +183,11 @@ strong {
   .nav nav {
     padding: 0px 24px;
   }
+  .nav nav h4 {
+    color: #615f5f;
+    font-weight: 500;
+    font-size: 32px;
+  }
   .nav nav .nav-div {
     height: 80px;
   }

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 router.get('/',(req,res)=>{
-    res.render('index',{title:"home page"});
+    res.render('index',{title:"Image Converter"});
     });
     
 
@@ -11,9 +11,10 @@ router.get('/convert-to-webp',(req,res)=>{
     });
     });
 
-router.get('/webp-to-png',(req,res)=>{
-    res.render('webp-to-png',{
-        title:"WEBP to PNG"
+
+router.get('/convert-to-png',(req,res)=>{
+    res.render('convert-to-png',{
+        title:"Convert to PNG"
     });
     });
 

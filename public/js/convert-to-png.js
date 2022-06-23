@@ -1,11 +1,11 @@
-let webptoPng=document.querySelector("#webptopng");
-let webptoPngBtn=document.querySelector("#webpBtn");
-let previewWebtoPng=document.querySelector(".preview-image");
-let WebtoPngDiv=document.querySelector(".preview-div");
-let RemoveWebtoPng=document.querySelector("#removeImg");
+let jpgtopng=document.querySelector("#jpgtopng");
+let jpgtopngBtn=document.querySelector("#webpBtn");
+let previewJpgtoPng=document.querySelector(".preview-image");
+let jpgtopngDiv=document.querySelector(".preview-div");
+let Rmjpgtopng=document.querySelector("#removeImg");
 
-webptoPngBtn.addEventListener('click',()=>{
-    if(webptoPng.value == "") {
+jpgtopngBtn.addEventListener('click',()=>{
+    if(jpgtopng.value == "") {
         toastr["warning"]("Please Select a File.", "Empty!");
         toastr.options = {
          "closeButton": true,
@@ -30,8 +30,8 @@ webptoPngBtn.addEventListener('click',()=>{
     }
       });
 
-  webptoPng.addEventListener('change',(e)=>{
-  let allowedExtension = ['image/webp'];
+  jpgtopng.addEventListener('change',(e)=>{
+  let allowedExtension = ['image/jpg','image/jpeg','image/webp','image/gif','image/avif','image/svg+xml','image/tiff'];
   if(e.target.files.length == 0){
     return
   }
@@ -45,32 +45,31 @@ webptoPngBtn.addEventListener('click',()=>{
   //  type validation
   if(allowedExtension.indexOf(type)>-1)
   {
-   previewWebtoPng.setAttribute('src',url);
+   previewJpgtoPng.setAttribute('src',url);
    document.querySelector(".file-name").textContent=name;
    document.querySelector("#size").textContent= Totalsize + " MB";
-   WebtoPngDiv.style.display="flex";
-   document.getElementById('webptoPngBtn').removeAttribute("disabled", "disabled");
+   jpgtopngDiv.style.display="flex";
+   document.getElementById('jpgtopngBtn').removeAttribute("disabled", "disabled");
   }else{
     toastr["error"]("File type not Supported..", "Error!");
-    webptoPng.value = "";
+    jpgtopng.value = "";
        }
-
 
     if (Totalsize > maxSize) {
       toastr["error"]("File Limit exceeded!.", "Error!");
-      document.getElementById('webptoPngBtn').setAttribute("disabled", "disabled");
+      document.getElementById('webpBtn').setAttribute("disabled", "disabled");
      }
 
   
 })
 
 //remove or emplty selected file || input field
-RemoveWebtoPng.addEventListener("click",()=>{
+Rmjpgtopng.addEventListener("click",()=>{
   document.getElementById('webpBtn').removeAttribute("disabled", "disabled");
-  webptoPng.value = "";
+  jpgtopng.value = "";
   document.querySelector(".file-name").textContent="";
   document.querySelector("#size").textContent="";
-  previewWebtoPng.removeAttribute('src');
-  WebtoPngDiv.style.display="none";
+  previewJpgtoPng.removeAttribute('src');
+  jpgtopngDiv.style.display="none";
 
 })

@@ -7,21 +7,20 @@
   <%- include('../partials/nav.ejs');%>
   <main class="main-webp">
   <section class="webp-upload">
-        <h1>Convert An Image from WEBP to PNG Format</h1>
-        <p>WEBP Converter</p>
-
+        <h1>Convert An Image into PNG Format</h1>
+        <p>PNG Converter</p>
         <ul>
-          <li>Choose <strong>WEBP</strong> File that you want to Convert into <strong>PNG</strong> Format. Note: Animated WebP files are not supported.</li>
+          <li>Choose File that you want to Convert into <strong>PNG</strong> Format.You can Convert <strong>JPG,JPEG,GIF,TIFF,WEBP,AVIF,SVG</strong> samples images.</li>
           <li>You can Convert <strong>1</strong> file at one time.The Maximum File Size is <strong>5MB.</strong></li>
           <li>After Selecting the File Click on <strong>Convert image</strong> button & Your converted file will be downloaded within a few seconds.</li>
         </ul>
-        <form action="/webp-to-png" id="myform" method="POST" enctype="multipart/form-data">
+        <form action="/convert-to-png" id="myform" method="POST" enctype="multipart/form-data">
           <div class="form">
           <div class="label">
             <i class="fa fa-cloud-upload" aria-hidden="true"></i>
             <p>Upload Files here</p>
-            <input type="file" name="webptopng" id="webptopng" required accept="image/webp," >
-            <label class="upload-file" for="webptopng">
+            <input type="file" name="png" id="jpgtopng" required accept="image/jpg,image/jpeg,image/webp,image/gif,image/avif,image/svg+xml,image/tiff">
+            <label class="upload-file" for="jpgtopng">
               <i class="fa-solid fa-magnifying-glass"></i>
               <span>Choose File</span>
             </label>
@@ -50,16 +49,16 @@
       </div>
       <div class="other-tools">
         <div>
-          <a href="/webp-to-png">WEBP to PNG</a>
+          <a href="/convert-to-png">WEBP to PNG</a>
         </div>
         <div>
-          <a href="/convert-to-webp">PNG to WEBP</a>
+          <a href="/convert-to-png">JPG to PNG</a>
         </div>
         <div>
-          <a href="/convert-to-webp">JPG to WEBP</a>
+          <a href="/convert-to-png">SVG to PNG</a>
         </div>
         <div>
-          <a href="/convert-to-webp">JPEG to WEBP</a>
+          <a href="/convert-to-png">GIF to PNG</a>
         </div>
       </div>
      </div>

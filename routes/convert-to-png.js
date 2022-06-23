@@ -45,7 +45,7 @@ convertTong.post('/convert-to-png',(req,res)=>{
       }
       else {
     //  console.log(req.file.path);
-     let output_path = Date.now() + "-" + "output.png";
+  let output_path = Date.now() + "-" + "output.png";
   sharp(req.file.path)
   .toFile(output_path) 
   .then( data => {res.download(output_path); })

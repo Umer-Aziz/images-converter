@@ -1,14 +1,14 @@
 const webpRouter = require('express').Router();
 const multer = require('multer');
-const webp=require('webp-converter');
-webp.grant_permission();
+const sharp = require("sharp");
+const path = require('path');
 
     var storage = multer.diskStorage({
         destination: function (req, file, callback) {
           callback(null, "uploads/");
         },
         filename: function (req, file, callback) {
-          callback(null, file.fieldname + "_" + Date.now() + "_"  + file.originalname);
+          callback(null, file.fieldname + "_" + Date.now() + "_"  +path.extname(file.originalname));
         },
       });
     
@@ -19,11 +19,12 @@ webp.grant_permission();
       var upload = multer({
         storage: storage,
         fileFilter: (req, file, cb) => {
-          if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg" || file.mimetype == "image/tiff" || file.mimetype == "image/webp") {
-            cb(null, true);
-          } else {
+          if ( file.mimetype == "image/jpg" || file.mimetype == "image/jpeg" || file.mimetype == "image/png" 
+        || file.mimetype == "image/gif" || file.mimetype == "image/avif" || file.mimetype == "image/svg+xml" || file.mimetype == "image/tiff") {
+          cb(null, true);
+        } else {
             cb(null, false);
-            return cb(new Error('Only .png, .jpg and .jpeg , tiff , webp format allowed!'));
+            return cb(new Error('Only .png, .jpg and .jpeg , tiff ,svg,gif,avif format allowed!'));
           }
         },
         limits: { fileSize: maxSize }
@@ -45,11 +46,10 @@ webp.grant_permission();
       else {
   //    console.log(req.file.path);
   let output_path = Date.now() + "-" + "output.webp";
-
-  const result = webp.cwebp(req.file.path,output_path,"-q 80");
-  result.then((response) => {
-  res.download(output_path);
-});
+  sharp(req.file.path)
+  .toFile(output_path) 
+  .then( data => {res.download(output_path); })
+  .catch( err => { console.log(err)});
 
 }
 

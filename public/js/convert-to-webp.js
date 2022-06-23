@@ -31,7 +31,7 @@ webpBtn.addEventListener('click',()=>{
       });
 
 webp.addEventListener('change',(e)=>{
-  let allowedExtension = ['image/jpeg', 'image/jpg', 'image/png','image/tiff','image/webp'];
+  let allowedExtension = ['image/jpg','image/jpeg','image/png','image/gif','image/avif','image/svg+xml','image/tiff'];
   if(e.target.files.length == 0){
     return
   }

@@ -4,6 +4,7 @@ const path = require('path');
 const mainRoutes = require('./routes/router');
 const webpRouter = require('./routes/convert-to-webp');
 const jpgToPngRouter = require('./routes/convert-to-png');
+const convertTojpg = require('./routes/convert-to-jpg');
 const port = process.env.PORT || 3000;
 
 const staticPath=path.join(__dirname,"./public");
@@ -18,6 +19,7 @@ app.use(express.static(staticPath));
 app.use(mainRoutes);
 app.use(webpRouter);
 app.use(jpgToPngRouter);
+app.use(convertTojpg);
 
 
 app.listen(port,()=>{

@@ -18,6 +18,14 @@ router.get('/convert-to-png',(req,res)=>{
     });
     });
 
+    
+router.get('/convert-to-jpg',(req,res)=>{
+    res.render('convert-to-jpg',{
+        title:"Convert to JPG"
+    });
+    });
+
+
 router.get('/contact',(req,res)=>{
     res.render('contact',{
         title:"Contact Us"

@@ -7,20 +7,20 @@
   <%- include('../partials/nav.ejs');%>
   <main class="main-webp">
   <section class="webp-upload">
-        <h1>Convert An Image into JPG Format</h1>
-        <p>JPG Converter</p>
+        <h1>Convert An Image into JPEG Format</h1>
+        <p>JPEG Converter</p>
         <ul>
-          <li>Choose File that you want to Convert into <strong>JPG</strong> Format.You can Convert <strong>PNG,JPEG,GIF,TIFF,WEBP,AVIF,SVG</strong> samples images.</li>
+          <li>Choose File that you want to Convert into <strong>JPEG</strong> Format.You can Convert <strong>PNG,JPG,GIF,TIFF,WEBP,AVIF,SVG</strong> samples images.</li>
           <li>You can Convert <strong>1</strong> file at one time.The Maximum File Size is <strong>5MB.</strong></li>
           <li>After Selecting the File Click on <strong>Convert image</strong> button & Your converted file will be downloaded within a few seconds.</li>
         </ul>
-        <form action="/convert-to-jpg" id="myform" method="POST" enctype="multipart/form-data">
+        <form action="/convert-to-jpeg" id="myform" method="POST" enctype="multipart/form-data">
           <div class="form">
           <div class="label">
             <i class="fa fa-cloud-upload" aria-hidden="true"></i>
             <p>Upload Files here</p>
-            <input type="file" name="jpg" id="jpg" required accept="image/png,image/jpeg,image/webp,image/gif,image/avif,image/svg+xml,image/tiff">
-            <label class="upload-file" for="jpg">
+            <input type="file" name="jpeg" id="jpeg" required accept="image/png,image/jpg,image/jpeg,image/webp,image/gif,image/avif,image/svg+xml,image/tiff">
+            <label class="upload-file" for="jpeg">
               <i class="fa-solid fa-magnifying-glass"></i>
               <span>Choose File</span>
             </label>
@@ -49,16 +49,16 @@
       </div>
       <div class="other-tools">
         <div>
-          <a href="/convert-to-jpeg">WEBP to JPEG</a>
+          <a href="/convert-to-svg">PNG to svg</a>
         </div>
         <div>
-          <a href="/convert-to-jpeg">JPG to JPEG</a>
+          <a href="/convert-to-svg">JPG to SVG</a>
         </div>
         <div>
-          <a href="/convert-to-jpeg">PNG to JPEG</a>
+          <a href="/convert-to-svg">JPEG to SVG</a>
         </div>
         <div>
-          <a href="/convert-to-jpeg">GIF to JPEG</a>
+          <a href="/convert-to-svg">WEBP to SVG</a>
         </div>
       </div>
      </div>

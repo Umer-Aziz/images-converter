@@ -5,6 +5,7 @@ const mainRoutes = require('./routes/router');
 const webpRouter = require('./routes/convert-to-webp');
 const jpgToPngRouter = require('./routes/convert-to-png');
 const convertTojpg = require('./routes/convert-to-jpg');
+const convertTojpeg = require('./routes/convert-to-jpeg');
 const port = process.env.PORT || 3000;
 
 const staticPath=path.join(__dirname,"./public");
@@ -20,6 +21,7 @@ app.use(mainRoutes);
 app.use(webpRouter);
 app.use(jpgToPngRouter);
 app.use(convertTojpg);
+app.use(convertTojpeg);
 
 
 app.listen(port,()=>{

@@ -25,6 +25,12 @@ router.get('/convert-to-jpg',(req,res)=>{
     });
     });
 
+router.get('/convert-to-jpeg',(req,res)=>{
+        res.render('convert-to-jpeg',{
+            title:"Convert to JPEG"
+        });
+        });
+
 
 router.get('/contact',(req,res)=>{
     res.render('contact',{

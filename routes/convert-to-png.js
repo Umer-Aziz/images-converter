@@ -25,7 +25,7 @@ var storage = multer.diskStorage({
           cb(null, true);
         } else {
           cb(null, false);
-          return cb(new Error('Only .webp, .jpg and .jpeg , tiff ,svg,gif,avif format allowed!'));
+          return cb(new Error('Only .webp, .jpg .jpeg , tiff ,svg,gif, and avif format allowed!'));
         }
       },
       limits: { fileSize: maxSize }

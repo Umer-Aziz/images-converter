@@ -24,7 +24,7 @@ const path = require('path');
           cb(null, true);
         } else {
             cb(null, false);
-            return cb(new Error('Only .png, .jpg and .jpeg , tiff ,svg,gif,avif format allowed!'));
+            return cb(new Error('Only .png, .jpg .jpeg , tiff ,svg,gif, and avif format allowed!'));
           }
         },
         limits: { fileSize: maxSize }

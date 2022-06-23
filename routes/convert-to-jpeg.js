@@ -1,4 +1,4 @@
-const convertTojpg = require('express').Router();
+const convertTojpeg = require('express').Router();
 const multer = require('multer');
 const path = require('path');
 const sharp = require("sharp");
@@ -20,20 +20,20 @@ var storage = multer.diskStorage({
     var upload = multer({
       storage: storage,
       fileFilter: (req, file, cb) => {
-        if ( file.mimetype == "image/png" || file.mimetype == "image/jpeg" || file.mimetype == "image/webp" 
+        if ( file.mimetype == "image/png" || file.mimetype == "image/jpeg" || file.mimetype == "image/jpg" || file.mimetype == "image/webp" 
         || file.mimetype == "image/gif" || file.mimetype == "image/avif" || file.mimetype == "image/svg+xml" || file.mimetype == "image/tiff") {
           cb(null, true);
         } else {
           cb(null, false);
-          return cb(new Error('Only .png, .webp .jpeg , tiff ,svg,gif, and avif format allowed!'));
+          return cb(new Error('Only .png, .webp .jpg .jpeg , tiff ,svg,gif, and avif format allowed!'));
         }
       },
       limits: { fileSize: maxSize }
-    }).single('jpg');
+    }).single('jpeg');
   
   // webp to png 
 
-convertTojpg.post('/convert-to-jpg',(req,res)=>{
+convertTojpeg.post('/convert-to-jpeg',(req,res)=>{
     upload(req,res,err =>{
   
        if (err instanceof multer.MulterError) {
@@ -45,7 +45,7 @@ convertTojpg.post('/convert-to-jpg',(req,res)=>{
       }
       else {
     //  console.log(req.file.path);
-  let output_path = Date.now() + "-" + "output.jpg";
+  let output_path = Date.now() + "-" + "output.jpeg";
   sharp(req.file.path)
   .toFile(output_path) 
   .then( data => {res.download(output_path); })
@@ -55,5 +55,5 @@ convertTojpg.post('/convert-to-jpg',(req,res)=>{
   
     });
 
-module.exports = convertTojpg;
+module.exports = convertTojpeg;
     

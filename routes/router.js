@@ -31,6 +31,12 @@ router.get('/convert-to-jpeg',(req,res)=>{
         });
         });
 
+router.get('/convert-to-svg',(req,res)=>{
+            res.render('convert-to-svg',{
+                title:"Convert to SVG"
+            });
+            });
+
 
 router.get('/contact',(req,res)=>{
     res.render('contact',{

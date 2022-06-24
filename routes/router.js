@@ -37,6 +37,24 @@ router.get('/convert-to-svg',(req,res)=>{
             });
             });
 
+router.get('/convert-to-tiff',(req,res)=>{
+            res.render('convert-to-tiff',{
+                title:"Convert to TIFF"
+            });
+            });
+
+router.get('/convert-to-gif',(req,res)=>{
+            res.render('convert-to-gif',{
+                title:"Convert to GIF"
+            });
+            });
+
+router.get('/convert-to-avif',(req,res)=>{
+            res.render('convert-to-avif',{
+                title:"Convert to AVIF"
+            });
+            });
+
 
 router.get('/contact',(req,res)=>{
     res.render('contact',{

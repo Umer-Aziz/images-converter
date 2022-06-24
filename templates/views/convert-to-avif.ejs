@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs');%>
+</head>
+<body>
+  <%- include('../partials/nav.ejs');%>
+  <main class="main-webp">
+  <section class="webp-upload">
+        <h1>Convert An Image into AVIF Format</h1>
+        <p>AVIF Converter</p>
+        <ul>
+          <li>Choose File that you want to Convert into <strong>AVIF</strong> Format.You can Convert <strong>PNG,JPG,TIFF,SVG,WEBP,GIF,JPEG</strong> samples images.</li>
+          <li>You can Convert <strong>1</strong> file at one time.The Maximum File Size is <strong>5MB.</strong></li>
+          <li>After Selecting the File Click on <strong>Convert image</strong> button & Your converted file will be downloaded within a few seconds.</li>
+        </ul>
+        <form action="/convert-to-avif" id="myform" method="POST" enctype="multipart/form-data">
+          <div class="form">
+          <div class="label">
+            <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+            <p>Upload Files here</p>
+            <input type="file" name="avif" id="avif" required accept="image/png,image/jpg,image/jpeg,image/webp,image/tiff,image/gif,image/svg+xml">
+            <label class="upload-file" for="avif">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Choose File</span>
+            </label>
+          </div>
+        </div>
+        <div class="preview-div">
+          <span class="file-name"></span>
+          <img class="preview-image">
+          <i id="removeImg" class="fa-solid fa-square-xmark"></i>
+          <span id="size"></span>
+            <div class="overflow"></div>
+        </div>
+        <button id="webpBtn" type="submit" class="btn">Convert Image</button>
+        </form>
+        </section>
+
+  <section class="other-web">
+    <div>
+      <div class="other-head">
+        <i class="fa-solid fa-file-image"></i>
+          <h4>CONVERTER</h4>
+     </div>
+     <div class="other-formats">
+      <div class="format-h5">
+        <h5>Convert to Other Formats</h5>
+      </div>
+      <div class="other-tools">
+        <div>
+          <a href="/convert-to-avif">GIF to AVIF</a>
+        </div>
+        <div>
+          <a href="/convert-to-avif">PNG to AVIF</a>
+        </div>
+        <div>
+          <a href="/convert-to-avif">WEBP to AVIF</a>
+        </div>
+        <div>
+          <a href="/convert-to-avif">SVG to AVIF</a>
+        </div>
+      </div>
+     </div>
+    </div>
+  </section>
+  </main>
+        <%- include('../partials/footer.ejs');%>
+</body>
+</html>

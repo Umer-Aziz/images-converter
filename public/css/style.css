@@ -447,7 +447,8 @@ footer > div div ul li a:hover {
 }
 @media screen and (min-width: 767px) {
   footer > div {
-    padding: 24px 0 32px 0;
+    padding: 0px 24px !important;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -466,8 +467,10 @@ footer > div div ul li a:hover {
   footer > div div {
     display: flex;
     justify-content: flex-end;
+    margin-top: 0px;
   }
   footer > div div ul {
+    margin-top: 0px !important;
     margin-right: 24px;
     width: 300px;
     justify-content: space-between;
@@ -475,7 +478,8 @@ footer > div div ul li a:hover {
 }
 @media screen and (min-width: 1024px) {
   footer > div {
-    padding: 24px 0 32px 0;
+    padding: 0px 32px !important;
+    height: 80px;
   }
   footer > div .copy .copyright {
     margin-left: 32px;
@@ -489,6 +493,8 @@ footer > div div ul li a:hover {
 }
 @media screen and (min-width: 1280px) {
   footer > div {
+    padding: 0px !important;
+    height: 100px;
     max-width: 1200px;
     margin: 0 auto;
   }

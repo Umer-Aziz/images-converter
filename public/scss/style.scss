@@ -456,8 +456,9 @@ footer {
 
     @media screen and (min-width:767px){
         & > div {
-            padding:24px 0 32px 0;
-            display: flex;
+        padding:0px 24px !important;
+        height: 80px;
+        display: flex;
         justify-content: space-between;
         align-items: center;
             .copy  {
@@ -474,7 +475,9 @@ footer {
             div{
                 display: flex;
                 justify-content: flex-end;
+                margin-top: 0px;
                 ul{
+                    margin-top: 0px !important;
                     margin-right: 24px;
                     width: 300px;
                     justify-content: space-between;
@@ -485,7 +488,8 @@ footer {
 }
 @media screen and (min-width:1024px){
     & > div {
-        padding:24px 0 32px 0;
+        padding:0px 32px !important;
+        height: 80px;
         .copy {
             .copyright{
                 margin-left: 32px;
@@ -506,6 +510,8 @@ footer {
 }
 @media screen and (min-width:1280px){
     >div {
+        padding:0px !important;
+        height: 100px;
         max-width: 1200px;
         margin: 0 auto;
         .copy {

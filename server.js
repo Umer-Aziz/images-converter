@@ -7,6 +7,9 @@ const jpgToPngRouter = require('./routes/convert-to-png');
 const convertTojpg = require('./routes/convert-to-jpg');
 const convertTojpeg = require('./routes/convert-to-jpeg');
 const convertToSvg = require('./routes/convert-to-svg');
+const convertToTiff = require('./routes/convert-to-tiff');
+const convertToGif = require('./routes/convert-to-gif');
+const convertToAvif = require('./routes/convert-to-avif');
 const port = process.env.PORT || 3000;
 
 const staticPath=path.join(__dirname,"./public");
@@ -24,6 +27,9 @@ app.use(jpgToPngRouter);
 app.use(convertTojpg);
 app.use(convertTojpeg);
 app.use(convertToSvg);
+app.use(convertToTiff);
+app.use(convertToGif);
+app.use(convertToAvif);
 
 
 app.listen(port,()=>{

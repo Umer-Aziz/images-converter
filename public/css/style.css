@@ -614,7 +614,7 @@ footer > div div ul li a:hover {
 .main-webp .webp-upload .preview-div i:hover {
   opacity: 0.8;
 }
-.main-webp .webp-upload .preview-div #size {
+.main-webp .webp-upload .preview-div .size, .main-webp .webp-upload .preview-div #size {
   position: absolute;
   top: 40%;
   text-align: center;
@@ -1023,4 +1023,20 @@ section .privacy p {
   .about-section .about {
     column-gap: 60px;
   }
+}
+
+.ico-size {
+  margin-top: 20px;
+}
+.ico-size label {
+  font-size: 18px;
+  line-height: 28px;
+}
+.ico-size select {
+  padding: 6px 4px;
+  outline: none;
+  margin-left: 12px;
+  color: #615f5f;
+  font-size: 16px;
+  line-height: 26px;
 }

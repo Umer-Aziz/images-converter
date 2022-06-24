@@ -645,7 +645,7 @@ footer {
                     opacity: 0.8;
                 }
             }
-            #size{
+            .size,#size{
                 position: absolute;
                 top: 40%;
                 text-align: center;
@@ -1081,4 +1081,20 @@ section {
         }
     }
 
+}
+
+.ico-size {
+    margin-top: 20px;
+    label {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    select {
+        padding: 6px 4px;
+        outline: none;
+        margin-left: 12px;
+        color: $dull;
+        font-size: 16px;
+        line-height: 26px;
+    }
 }

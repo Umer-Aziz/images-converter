@@ -5,7 +5,7 @@ const sharp = require("sharp");
 
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
-      callback(null, "uploads/");
+      callback(null, "public/uploads");
     },
     filename: function (req, file, callback) {
       callback(null, file.fieldname + "_" + Date.now() + "_"  + path.extname(file.originalname));

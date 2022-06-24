@@ -35,7 +35,7 @@ jpgtopngBtn.addEventListener('click',()=>{
   if(e.target.files.length == 0){
     return
   }
-  const maxSize = 5242;
+  const maxSize = 5;
   let url = URL.createObjectURL(e.target.files[0]);
   let name=e.target.files[0].name;
   let size=e.target.files[0].size;
@@ -49,7 +49,7 @@ jpgtopngBtn.addEventListener('click',()=>{
    document.querySelector(".file-name").textContent=name;
    document.querySelector("#size").textContent= Totalsize + " MB";
    jpgtopngDiv.style.display="flex";
-   document.getElementById('jpgtopngBtn').removeAttribute("disabled", "disabled");
+   document.getElementById('webpBtn').removeAttribute("disabled", "disabled");
   }else{
     toastr["error"]("File type not Supported..", "Error!");
     jpgtopng.value = "";
@@ -59,7 +59,6 @@ jpgtopngBtn.addEventListener('click',()=>{
       toastr["error"]("File Limit exceeded!.", "Error!");
       document.getElementById('webpBtn').setAttribute("disabled", "disabled");
      }
-
   
 })
 

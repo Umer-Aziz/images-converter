@@ -1040,3 +1040,10 @@ section .privacy p {
   font-size: 16px;
   line-height: 26px;
 }
+
+.progress-bar {
+  margin-top: 10px;
+  font-size: 22px;
+  line-height: 30px;
+  color: #CC7EDF;
+}

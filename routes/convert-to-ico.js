@@ -7,7 +7,7 @@ const fs = require("fs");
 
 const maxSize = 5 * 1024 * 1024 ;
   
-const dir = 'public/uploads';
+const dir = 'uploads/';
 if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir, {
       recursive: true
@@ -17,7 +17,7 @@ if (!fs.existsSync(dir)) {
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "public/uploads");
+    cb(null, "uploads/");
   },
   filename: function (req, file, cb) {
     cb(

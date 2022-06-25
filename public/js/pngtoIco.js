@@ -70,7 +70,7 @@ function convertFile(){
       // add the files to formData object for the data payload
       formData.append('file', file, file.name);
     }
-    console.log(formData)
+    // console.log(formData)
     var formdata2 = new FormData()
     $.ajax({
       url: '/uploadpngtoico',
@@ -80,7 +80,7 @@ function convertFile(){
       contentType: false,
       success: function(data){
           var data2 = {path:data.path,size:size}
-          console.log('upload successful!\n' + data.path);
+          // console.log('upload successful!\n' + data.path);
           $("#button").text("File Uploaded Now Processing")
           $("#button").prop("disabled",true);
           formdata2.append('path',data.path)

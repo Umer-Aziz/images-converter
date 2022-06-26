@@ -57,7 +57,15 @@ convertToSvg.post('/convert-to-svg',(req,res)=>{
   let output_path = Date.now() + "-" + "output.svg";
   sharp(req.file.path)
   .toFile(output_path) 
-  .then( data => {res.download(output_path); })
+  .then( data => {res.download(output_path,(err)=>{
+    if (err) throw err;
+    // console.log(req.file)
+    if (req.file) {
+      fs.unlinkSync(req.file.path);
+      fs.unlinkSync(output_path);
+    }
+  });
+ })
   .catch( err => { console.log(err)});
   }
     }); 

@@ -7,7 +7,7 @@ const fs = require("fs");
 
 const maxSize = 5 * 1024 * 1024 ;
   
-const dir = 'uploads/';
+const dir = "uploads";
 if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir, {
       recursive: true
@@ -17,7 +17,7 @@ if (!fs.existsSync(dir)) {
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "uploads/");
+    cb(null, "uploads");
   },
   filename: function (req, file, cb) {
     cb(
@@ -78,6 +78,7 @@ convertToIco.post("/pngtoico", (req, res) => {
           .catch(console.error);
       });
     });
+
 convertToIco.get('/download',(req,res) => {
       var pathoutput = req.query.path
       res.download(pathoutput,(err) =>{

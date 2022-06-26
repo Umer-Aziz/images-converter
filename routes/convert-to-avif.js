@@ -2,10 +2,18 @@ const convertToAvif = require('express').Router();
 const multer = require('multer');
 const path = require('path');
 const sharp = require("sharp");
+const fs = require("fs");
+
+const dir = 'public/uploads';
+if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, {
+        recursive: true
+    });
+}
 
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
-      callback(null, "uploads");
+      callback(null, "public/uploads");
     },
     filename: function (req, file, callback) {
       callback(null, file.fieldname + "_" + Date.now() + "_"  + path.extname(file.originalname));
@@ -48,7 +56,15 @@ convertToAvif.post('/convert-to-avif',(req,res)=>{
   let output_path = Date.now() + "-" + "output.avif";
   sharp(req.file.path)
   .toFile(output_path) 
-  .then( data => {res.download(output_path); })
+  .then( data => {res.download(output_path,(err)=>{
+    if (err) throw err;
+    // console.log(req.file)
+    if (req.file) {
+      fs.unlinkSync(req.file.path);
+      fs.unlinkSync(output_path);
+    }
+  });
+ })
   .catch( err => { console.log(err)});
   }
     }); 

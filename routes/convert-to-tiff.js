@@ -2,10 +2,19 @@ const convertToTiff = require('express').Router();
 const multer = require('multer');
 const path = require('path');
 const sharp = require("sharp");
+const fs = require("fs");
+
+const dir = 'public/uploads';
+if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, {
+        recursive: true
+    });
+}
+
 
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
-      callback(null, "uploads");
+      callback(null, "public/uploads");
     },
     filename: function (req, file, callback) {
       callback(null, file.fieldname + "_" + Date.now() + "_"  + path.extname(file.originalname));

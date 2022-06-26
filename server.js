@@ -11,7 +11,6 @@ const convertToSvg = require('./routes/convert-to-svg');
 const convertToTiff = require('./routes/convert-to-tiff');
 const convertToGif = require('./routes/convert-to-gif');
 const convertToAvif = require('./routes/convert-to-avif');
-const convertToIco = require('./routes/convert-to-ico');
 const port = process.env.PORT || 3000;
 
 const staticPath=path.join(__dirname,"./public");
@@ -34,8 +33,6 @@ app.use(convertToSvg);
 app.use(convertToTiff);
 app.use(convertToGif);
 app.use(convertToAvif);
-app.use(convertToIco);
-
 
 app.listen(port,()=>{
 console.log(`This app is running at http://localhost:${port}`)

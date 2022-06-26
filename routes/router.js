@@ -55,13 +55,6 @@ router.get('/convert-to-avif',(req,res)=>{
             });
             });
 
-router.get('/pngtoico',(req,res)=>{
-            res.render('convert-to-ico',{
-                title:"Convert to ICO"
-            });
-            });
-
-
 router.get('/contact',(req,res)=>{
     res.render('contact',{
         title:"Contact Us"

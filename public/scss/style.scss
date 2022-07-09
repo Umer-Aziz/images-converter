@@ -1104,3 +1104,30 @@ section {
     line-height: 30px;
     color: $mainColor;
 }
+
+.submenu {
+    position: absolute;
+    top: 100px;
+    left: 55%;
+    background: $white;
+    border-top: 1px solid #615f5f30;
+    div {
+        width:380px;
+        padding:20px 28px;
+        ul {
+            max-width:370px;
+            display: grid !important;
+            grid-template-columns: repeat(2,1fr);
+            row-gap: 10px;
+            margin: auto;
+            li {
+                a {
+                    font-size: 18px !important;
+                    line-height: 26px;
+                }
+            }
+            
+        }
+    }
+    
+}

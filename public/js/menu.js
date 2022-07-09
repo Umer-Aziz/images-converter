@@ -9,3 +9,7 @@ document.querySelector('.all-tools').addEventListener('click',()=>{
     document.querySelector('.submenu').classList.toggle('hidden');
     document.querySelector('.fa-chevron-down').classList.toggle('rotate');
 })
+document.querySelector('#allTools').addEventListener('click',()=>{
+    document.querySelector('.submenu-mobile').classList.toggle('hidden');
+    document.querySelector('.arrow-down').classList.toggle('rotate');
+})

@@ -1072,6 +1072,28 @@ section .privacy p {
   margin: auto;
 }
 .submenu div ul li a {
-  font-size: 18px !important;
-  line-height: 26px;
+  font-weight: 400 !important;
+}
+
+.submenu-mobile {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(97, 95, 95, 0.1882352941);
+}
+.submenu-mobile div {
+  padding: 20px 0 20px 28px;
+}
+.submenu-mobile div ul {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.submenu-mobile div ul li {
+  list-style: none;
+}
+.submenu-mobile div ul li a {
+  font-weight: 400 !important;
+  color: #615f5f;
 }

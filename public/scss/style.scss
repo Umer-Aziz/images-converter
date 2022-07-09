@@ -1126,8 +1126,7 @@ section {
             margin: auto;
             li {
                 a {
-                    font-size: 18px !important;
-                    line-height: 26px;
+                    font-weight: 400 !important;
                 }
             }
             
@@ -1135,3 +1134,29 @@ section {
     }
     
 }
+.submenu-mobile {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: $white;
+    border-top: 1px solid #615f5f30;
+    div {
+        padding:20px 0 20px 28px;
+        ul {
+            display: grid !important;
+            grid-template-columns: repeat(2,1fr);
+            gap: 12px;
+            li {
+                list-style: none;
+                
+                a {
+                    font-weight: 400 !important;
+                    color: $dull;
+                }
+            }
+            
+        }
+    }
+    
+}
+

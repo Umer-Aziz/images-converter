@@ -5,3 +5,7 @@ document.querySelector(".menu").addEventListener('click',()=>{
     document.body.classList.toggle("touch-action");
 
 })
+document.querySelector('.all-tools').addEventListener('click',()=>{
+    document.querySelector('.submenu').classList.toggle('hidden');
+    document.querySelector('.fa-chevron-down').classList.toggle('rotate');
+})

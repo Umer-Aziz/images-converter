@@ -75,6 +75,10 @@ li {
 strong {
     font-weight: 600;
 }
+.rotate{
+    transform: rotate(180deg);
+    transition: all 200ms ease-in-out;
+}
 .nav {
     nav {
     background-color: $white;

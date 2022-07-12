@@ -72,13 +72,7 @@ router.get('/privacy-policy',(req,res)=>{
           title:"Privacy Policy"
       });
       });
-
-router.get('/progress',(req,res)=>{
-    res.render('progress',{
-        title:"Tool in progress.."
-    });
-    });
-    
+   
 
 module.exports = router;
     

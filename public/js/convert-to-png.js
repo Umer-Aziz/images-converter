@@ -35,7 +35,7 @@ jpgtopngBtn.addEventListener('click',()=>{
   if(e.target.files.length == 0){
     return
   }
-  const maxSize = 5;
+  const maxSize = 10;
   let url = URL.createObjectURL(e.target.files[0]);
   let name=e.target.files[0].name;
   let size=e.target.files[0].size;

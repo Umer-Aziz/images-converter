@@ -72,7 +72,6 @@ router.get('/privacy-policy',(req,res)=>{
           title:"Privacy Policy"
       });
       });
-   
 
 module.exports = router;
     

@@ -1160,3 +1160,28 @@ section {
     
 }
 
+.error {
+    padding:50px 24px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        text-align: center;
+        color:red ;
+        font-size: 26px;
+        line-height: 36px;
+        font-weight: 500;
+        @media screen and (min-width:768px){
+        font-size: 40px;
+        line-height: 48px;
+        }
+}
+.btn {
+    text-align: center;
+    color: $mainColor !important;
+    &:hover{
+       text-decoration: underline;
+    }
+}
+}

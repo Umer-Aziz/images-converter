@@ -1097,3 +1097,31 @@ section .privacy p {
   font-weight: 400 !important;
   color: #615f5f;
 }
+
+.error {
+  padding: 50px 24px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error h1 {
+  text-align: center;
+  color: red;
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .error h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+.error .btn {
+  text-align: center;
+  color: #CC7EDF !important;
+}
+.error .btn:hover {
+  text-decoration: underline;
+}

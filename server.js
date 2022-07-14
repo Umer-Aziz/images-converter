@@ -33,6 +33,11 @@ app.use(convertToSvg);
 app.use(convertToTiff);
 app.use(convertToGif);
 app.use(convertToAvif);
+app.use((req,res)=>{
+    res.status(404).render('404',{
+        title:"404 page"
+    })
+});
 
 app.listen(port,()=>{
 console.log(`This app is running at http://localhost:${port}`)

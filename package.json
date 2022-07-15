@@ -4,10 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "serve":"node server.js",
-    "start": "nodemon server.js -e js, ejs",
+    "prod":"node server.js",
+    "serve": "nodemon server.js -e js, ejs",
     "sass-watch": "sass --no-source-map --watch public/scss/style.scss public/css/style.css",
-    "dev": "npm-run-all --parallel start sass-watch"
+    "dev": "npm-run-all --parallel serve sass-watch"
   },
   "keywords": [],
   "author": "",

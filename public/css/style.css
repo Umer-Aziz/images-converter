@@ -83,7 +83,7 @@ strong {
 
 .nav nav {
   background-color: #FFFFFF;
-  padding: 0px 20px;
+  padding: 0px 16px;
 }
 .nav nav h4 {
   color: #615f5f;
@@ -108,7 +108,7 @@ strong {
 .nav nav .nav-div .menu-right-div {
   display: flex;
   justify-content: space-between;
-  width: 140px;
+  width: 130px;
 }
 .nav nav .nav-div .menu-right-div #allTools {
   list-style: none;

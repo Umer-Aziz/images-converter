@@ -9,8 +9,7 @@
 
 ### API :https://sharp.pixelplumbing.com/api-constructor#sharp
 
-## NPM PACKAGE:
-### https://www.npmjs.com/package/sharp
+### NPM PACKAGE: https://www.npmjs.com/package/sharp
 
 ## http://images-converter.com
 
